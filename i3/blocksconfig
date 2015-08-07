@@ -1,11 +1,3 @@
-#[down]
-#command=getdown
-#interval=5
-
-#[up]
-#command=getup
-#interval=5
-
 [cpu_usage]
 command=getcpuusage
 interval=1
