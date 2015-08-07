@@ -151,11 +151,10 @@ bar {
 	status_command i3blocks -c ~/.i3/blocksconfig
 }
 
-# Set the wallpaper
+## Autostart scripts
 exec setdefaultwallpaper
-
-# I forgot what this does but it's probably important
 exec xset -dpms
+exec set_mouse_sen_low
 
 # Make a high quality screenshot when the print screen button is pressed.
 bindsym Print exec scrot --quality 100 -e 'mv $f ~/Pictures/Screenshots/$f'
@@ -163,7 +162,7 @@ bindsym Print exec scrot --quality 100 -e 'mv $f ~/Pictures/Screenshots/$f'
 # Make a high quality screenshot of only the focused window.
 bindsym Shift+Print exec scrot --focused --quality 100 -e 'mv $f ~/Pictures/Screenshots/$f'
 
-# For some reason, moving it doesn't work.
+# For some reason, moving the screenshot doesn't work.
 #bindsym $mod+Shift+Print exec scrot -s -e 'mv $f ~/Pictures/Screenshot/$f'
 
 # I should probably set this to a calculator program, but for now this'll do.
