@@ -165,7 +165,6 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-
 bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -179,6 +178,7 @@ bar {
 exec setdefaultwallpaper
 exec xset -dpms
 exec set_mouse_sen_low
+exec nohup redshift &
 
 # Make a high quality screenshot when the print screen button is pressed.
 bindsym Print exec scrot --quality 100 -e 'mv $f ~/Pictures/Screenshots/$f'
@@ -195,3 +195,12 @@ bindsym XF86Calculator exec setrandomwallpaper
 # Get the FN layer volume keys to work
 bindsym XF86AudioRaiseVolume exec amixer set Master 5+
 bindsym XF86AudioLowerVolume exec amixer set Master 5-
+
+# ncmpcpp keybinds
+bindsym Shift+XF86AudioRaiseVolume exec ncmpcpp volume +5
+bindsym Shift+XF86AudioLowerVolume exec ncmpcpp volume -5
+bindsym Shift+XF86AudioNext exec ncmpcpp next
+bindsym Shift+XF86AudioPrev exec ncmpcpp prev
+bindsym Shift+XF86AudioAudioPlay exec ncmpcpp toggle
+bindsym Shift+XF86AudioStop exec ncmpcpp stop
+bindsym Shift+XF86AudioMute exec ncmpcpp volume 0
