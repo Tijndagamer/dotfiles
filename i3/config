@@ -201,6 +201,6 @@ bindsym Shift+XF86AudioRaiseVolume exec ncmpcpp volume +5
 bindsym Shift+XF86AudioLowerVolume exec ncmpcpp volume -5
 bindsym Shift+XF86AudioNext exec ncmpcpp next
 bindsym Shift+XF86AudioPrev exec ncmpcpp prev
-bindsym Shift+XF86AudioAudioPlay exec ncmpcpp toggle
+bindsym Shift+XF86AudioPlay exec ncmpcpp toggle
 bindsym Shift+XF86AudioStop exec ncmpcpp stop
 bindsym Shift+XF86AudioMute exec ncmpcpp volume 0

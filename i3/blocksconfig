@@ -29,4 +29,5 @@ interval=1
 [time]
 command=date '+%H:%M %d-%m-%Y'
 color=#19D1FF
+#command=timecolor
 interval=1
