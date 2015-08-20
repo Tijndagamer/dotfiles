@@ -174,11 +174,13 @@ bar {
 	status_command i3blocks -c ~/.i3/blocksconfig
 }
 
-## Autostart scripts
+#--- Autostart scripts ---#
 exec setdefaultwallpaper
 exec xset -dpms
 exec set_mouse_sen_low
 exec nohup redshift &
+
+#--- Keybindings ---#
 
 # Make a high quality screenshot when the print screen button is pressed.
 bindsym Print exec scrot --quality 100 -e 'mv $f ~/Pictures/Screenshots/$f'
@@ -204,3 +206,11 @@ bindsym Shift+XF86AudioPrev exec ncmpcpp prev
 bindsym Shift+XF86AudioPlay exec ncmpcpp toggle
 bindsym Shift+XF86AudioStop exec ncmpcpp stop
 bindsym Shift+XF86AudioMute exec ncmpcpp volume 0
+
+#--- Looks ---#
+
+hide_edge_borders vertical
+
+# Colors
+# class			border	backgr.	test	indicator
+	
