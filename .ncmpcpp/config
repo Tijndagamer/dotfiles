@@ -272,9 +272,9 @@ visualizer_look = "◆│"
 #
 #playlist_separate_albums = "no"
 #
-#playlist_display_mode = "classic" (classic/columns)
+playlist_display_mode = "columns" (classic/columns)
 #
-#browser_display_mode = "classic" (classic/columns)
+browser_display_mode = "columns" (classic/columns)
 #
 #search_engine_display_mode = "classic" (classic/columns)
 #
@@ -383,17 +383,17 @@ visualizer_look = "◆│"
 ## Note: You can define startup screen for ncmpcpp
 ## by choosing screen number from the list above.
 ##
-#startup_screen = "2"
+startup_screen = "2"
 #
-#jump_to_now_playing_song_at_start = "yes"
+jump_to_now_playing_song_at_start = "yes"
 #
-#ask_before_clearing_main_playlist = "no"
+ask_before_clearing_main_playlist = "yes"
 #
-#clock_display_seconds = "no"
+clock_display_seconds = "yes"
 #
-#display_volume_level = "yes"
+display_volume_level = "yes"
 #
-#display_bitrate = "no"
+display_bitrate = "yes"
 #
 #display_remaining_time = "no"
 #
@@ -460,17 +460,22 @@ empty_tag_color = "cyan"
 #
 header_window_color = "yellow"
 #
-volume_color = "default"
+#volume_color = "default"
+volume_color = "yellow"
 #
-state_line_color = "default"
+#state_line_color = "default"
+state_line_color = "yellow"
 #
-state_flags_color = "default"
+#state_flags_color = "default"
+state_flags_color = "yellow"
 #
 main_window_color = "yellow"
 #
-color1 = "white"
+#color1 = "white"
+color1 = "yellow"
 #
-color2 = "green"
+#color2 = "green"
+color2 = "red"
 #
 main_window_highlight_color = "default"
 #
