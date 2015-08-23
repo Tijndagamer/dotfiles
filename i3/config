@@ -6,6 +6,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod1
+set $win Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
@@ -135,6 +136,12 @@ bindsym $mod+Shift+F12 move container to workspace 22
 bindsym $mod+Shift+i move container to workspace IRC
 bindsym $mod+Shift+m move container to workspace Music
 
+# set workspaces to specific screen
+workspace 1 output DVI-D-0
+workspace 2 output DVI-D-0
+workspace 3 output DVI-D-0
+workspace 4 output DVI-D-0
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -175,6 +182,7 @@ bar {
 }
 
 #--- Autostart scripts ---#
+
 exec setdefaultwallpaper
 exec xset -dpms
 exec set_mouse_sen_low
@@ -199,6 +207,8 @@ bindsym XF86AudioRaiseVolume exec amixer set Master 5+
 bindsym XF86AudioLowerVolume exec amixer set Master 5-
 
 # ncmpcpp keybinds
+
+# With media keys
 bindsym Shift+XF86AudioRaiseVolume exec ncmpcpp volume +5
 bindsym Shift+XF86AudioLowerVolume exec ncmpcpp volume -5
 bindsym Shift+XF86AudioNext exec ncmpcpp next
@@ -207,10 +217,13 @@ bindsym Shift+XF86AudioPlay exec ncmpcpp toggle
 bindsym Shift+XF86AudioStop exec ncmpcpp stop
 bindsym Shift+XF86AudioMute exec ncmpcpp volume 0
 
+# With windows key
+bindsym $win+e exec ncmpcpp volume +5
+bindsym $win+w exec ncmpcpp volume -5
+bindsym $win+d exec ncmpcpp next
+bindsym $win+s exec ncmpcpp prev
+bindsym $win+r exec ncmpcpp toggle
+
 #--- Looks ---#
 
 hide_edge_borders vertical
-
-# Colors
-# class			border	backgr.	test	indicator
-	

@@ -14,17 +14,17 @@ interval=1
 command= getfreespace
 interval=30
 
-[networkstatus_wan]
-command=getnetworkstatus_wan
-interval=15
+#[networkstatus_wan]
+#command=getnetworkstatus_wan
+#interval=15
 
-[networkstatus_lan]
-command=getnetworkstatus_lan
-interval=15
+#[networkstatus_lan]
+#command=getnetworkstatus_lan
+#interval=15
 
-[battery_level]
-command=getbatterystatus
-interval=1
+#[battery_level]
+#command=getbatterystatus
+#interval=1
 
 [time]
 command=date '+%H:%M %d-%m-%Y'
