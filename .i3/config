@@ -137,12 +137,10 @@ bindsym $mod+Shift+i move container to workspace IRC
 bindsym $mod+Shift+m move container to workspace Music
 
 # set workspaces to specific screen
-#workspace 1 output DVI-D-0
-#workspace 2 output DVI-D-0
-#workspace 3 output DVI-D-0
-#workspace 4 output DVI-D-0
 workspace "Music" output HDMI-0
 workspace 1 output DVI-I-1
+workspace 2 output DVI-I-1
+workspace 3 output DVI-I-1
 workspace 22 output HDMI-0
 
 # reload the configuration file
@@ -192,7 +190,11 @@ exec set_mouse_sen_low
 exec nohup redshift &
 #exec mpd
 exec --no-startup-id i3-msg 'workspace "Music"; exec xfce4-terminal'
+exec i3-msg 'workspace "Music"; exec xfce4-terminal'
 exec i3-msg 'workspace 22; exec pavucontrol'
+exec i3-msg 'workspace 3; exec steam'
+exec i3-msg 'workspace 1; exec google-chrome'
+exec monitor_fix
 
 #exec xrandr --output DVI-I-1 --left-of HDMI-0
 #exec xrandr --output DVI-D-0 --left-of DVI-I-1
@@ -206,7 +208,7 @@ bindsym Print exec scrot --quality 100 -e 'mv $f ~/Pictures/Screenshots/$f'
 bindsym Shift+Print exec scrot --focused --quality 100 -e 'mv $f ~/Pictures/Screenshots/$f'
 
 # For some reason, moving the screenshot doesn't work.
-#bindsym $mod+Shift+Print exec scrot -s -e 'mv $f ~/Pictures/Screenshot/$f'
+bindsym $mod+Shift+Print exec scrot -s -e 'mv $f ~/Pictures/Screenshot/$f'
 
 # I should probably set this to a calculator program, but for now this'll do.
 bindsym XF86Calculator exec setrandomwallpaper
@@ -218,13 +220,13 @@ bindsym XF86AudioLowerVolume exec amixer set Master 5-
 # ncmpcpp keybinds
 
 # With media keys
-bindsym Shift+XF86AudioRaiseVolume exec ncmpcpp volume +5
-bindsym Shift+XF86AudioLowerVolume exec ncmpcpp volume -5
-bindsym Shift+XF86AudioNext exec ncmpcpp next
-bindsym Shift+XF86AudioPrev exec ncmpcpp prev
-bindsym Shift+XF86AudioPlay exec ncmpcpp toggle
-bindsym Shift+XF86AudioStop exec ncmpcpp stop
-bindsym Shift+XF86AudioMute exec ncmpcpp volume 0
+bindsym Shift+XF86AudioRaiseVolume exec mpc volume +5
+bindsym Shift+XF86AudioLowerVolume exec mpc volume -5
+bindsym Shift+XF86AudioNext exec mpc next
+bindsym Shift+XF86AudioPrev exec mpc prev
+bindsym Shift+XF86AudioPlay exec mpc toggle
+bindsym Shift+XF86AudioStop exec mpc stop
+bindsym Shift+XF86AudioMute exec mpc volume 0
 
 # With windows key
 bindsym $win+e exec mpc volume +5
@@ -239,3 +241,5 @@ hide_edge_borders vertical
 
 #--- Program specific ---#
 
+for_window [class="Steam"] floating enable
+assign [class=^Steam$] 3

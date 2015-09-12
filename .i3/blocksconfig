@@ -6,6 +6,10 @@ interval=1
 command=getcputemp
 interval=1
 
+[gpu_temp]
+command=getgputemp
+interval=1
+
 [mem_usage]
 command=getusedmem
 interval=1
