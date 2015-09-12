@@ -141,6 +141,9 @@ bindsym $mod+Shift+m move container to workspace Music
 #workspace 2 output DVI-D-0
 #workspace 3 output DVI-D-0
 #workspace 4 output DVI-D-0
+workspace "Music" output HDMI-0
+workspace 1 output DVI-I-1
+workspace 22 output HDMI-0
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -187,8 +190,9 @@ exec setdefaultwallpaper
 exec xset -dpms
 exec set_mouse_sen_low
 exec nohup redshift &
-exec mpd
+#exec mpd
 exec --no-startup-id i3-msg 'workspace "Music"; exec xfce4-terminal'
+exec i3-msg 'workspace 22; exec pavucontrol'
 
 #exec xrandr --output DVI-I-1 --left-of HDMI-0
 #exec xrandr --output DVI-D-0 --left-of DVI-I-1
