@@ -196,7 +196,7 @@ exec monitor_fix
 exec --no-startup-id i3-msg 'workspace "Music"; exec xfce4-terminal'
 exec i3-msg 'workspace "Music"; exec xfce4-terminal'
 exec i3-msg 'workspace 22; exec pavucontrol'
-exec i3-msg 'workspace 3; exec steam'
+exec i3-msg 'workspace 2; exec steam'
 exec i3-msg 'workspace 1; exec google-chrome'
 exec i3-msg 'workspace 20; exec xfce4-terminal'
 exec i3-msg 'workspace 20; exec xfce4-terminal'
@@ -219,6 +219,10 @@ bindsym XF86Calculator exec setrandomwallpaper
 bindsym XF86AudioRaiseVolume exec amixer set Master 5+
 bindsym XF86AudioLowerVolume exec amixer set Master 5-
 
+# Change keyboard layout
+bindsym $mod+$win+o exec setxkbmap 'us(intl)'
+bindsym $mod+$win+p exec setxkbmap 'us(euro)'
+
 #--- ncmpcpp keybinds ---#
 
 # With media keys
@@ -236,12 +240,18 @@ bindsym $win+w exec mpc volume -5
 bindsym $win+d exec mpc next
 bindsym $win+s exec mpc prev
 bindsym $win+r exec mpc toggle
+bindsym $win+f exec mpc seek +1%
+bindsym $win+b exec mpc seek -1%
 
 #--- Looks ---#
 
 hide_edge_borders vertical
 
-#--- Program specific ---#
+#--- Program/Window specific ---#
 
 for_window [class="Steam"] floating enable
-assign [class=^Steam$] 3
+assign [class=^Steam$] 2
+
+for_window [class="^VirtualBox$"] floating enable
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
