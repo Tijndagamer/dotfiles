@@ -7,9 +7,7 @@ autoload -U colors
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="wedisagree"
-#ZSH_THEME="custom"
+ZSH_THEME="custom"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -108,5 +106,3 @@ man() {
     LESS_TERMCAP_us=$'\E[04;38;5;146m' \
     man "$@"
 }
-
-#PROMPT="[%*] %n@%M:%~$ "
