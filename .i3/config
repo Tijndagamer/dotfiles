@@ -142,9 +142,10 @@ bindsym $mod+Shift+m move container to workspace Music
 workspace 1 output DVI-I-1
 workspace 2 output DVI-I-1
 workspace 3 output DVI-I-1
-workspace 22 output HDMI-0
 workspace "Music" output HDMI-0
 workspace 20 output HDMI-0
+workspace 21 output HDMI-0
+workspace 22 output HDMI-0
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -192,6 +193,8 @@ exec xset -dpms
 exec set_mouse_sen_low
 exec nohup redshift &
 exec monitor_fix
+exec --no-startup-id compton
+exec unclutter
 
 exec --no-startup-id i3-msg 'workspace "Music"; exec xfce4-terminal'
 exec i3-msg 'workspace "Music"; exec xfce4-terminal'
@@ -208,6 +211,7 @@ bindsym Print exec scrot --quality 100 -e 'mv $f ~/Pictures/Screenshots/$f'
 
 # Make a high quality screenshot of only the focused window.
 bindsym Shift+Print exec scrot --focused --quality 100 -e 'mv $f ~/Pictures/Screenshots/$f'
+#bindsym Shift+Print exec scrot -e 'mv $f ~/Pictures/Screenshots/$f'
 
 # For some reason, moving the screenshot doesn't work.
 bindsym $mod+Shift+Print exec scrot -s -e 'mv $f ~/Pictures/Screenshot/$f'
@@ -246,6 +250,16 @@ bindsym $win+b exec mpc seek -1%
 #--- Looks ---#
 
 hide_edge_borders vertical
+
+#--- Colors ---#
+
+# class			border  backgr. text	indicator
+client.focused		#3366CC	#3366CC	#ffffff	#2e9ef4
+client.focused_inactive #191919	#191919	#ffffff	#484e50
+client.unfocused	#222222	#222222	#888888	#292d2e
+client.urgent		#2f343a	#900000	#ffffff	#900000
+client.placeholder	#000000	#0c0c0c	#ffffff	#000000
+
 
 #--- Program/Window specific ---#
 
