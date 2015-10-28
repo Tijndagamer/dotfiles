@@ -95,6 +95,13 @@ alias l='ls -CF'
 alias top='htop'
 alias pgrep='grep -P'
 
+# -A: smart home
+# -E: tabs to spaces
+# -i: autoindent
+# -m: mouse support
+# -T4: tabs are 4 spaces
+alias nano='nano -AEimT4'
+
 export PATH=~/bin:"$PATH"
 man() {
     env LESS_TERMCAP_mb=$'\E[01;31m' \
