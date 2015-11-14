@@ -188,13 +188,25 @@ bar {
 
 #--- Autostart scripts ---#
 
+# Set the walpaper
 exec setdefaultwallpaper
+# Disable screen turning off
 exec xset -dpms
+# Lower the mouse sensitivity
 exec set_mouse_sen_low
+# Redshift, otherwise my eyes die
 exec nohup redshift &
+# Set the monitors in the good position
 exec monitor_fix
-exec --no-startup-id compton
+# I don't use compton anymore
+#exec --no-startup-id compton
+# Mouse dissapears after a while
 exec unclutter
+# Copy 'daemon'
+exec nohup copy-console &
+# Set screenlocker after x amount of time
+#exec xautolock -time 1 -locker 'i3lock --show-failed-attempts --color 191919' &
+
 
 exec --no-startup-id i3-msg 'workspace "Music"; exec xfce4-terminal'
 exec i3-msg 'workspace "Music"; exec xfce4-terminal'
@@ -227,7 +239,10 @@ bindsym XF86AudioLowerVolume exec amixer set Master 5-
 bindsym $mod+$win+o exec setxkbmap 'us(intl)'
 bindsym $mod+$win+p exec setxkbmap 'us(euro)'
 
-#--- ncmpcpp keybinds ---#
+# Sceenlock
+bindysym $win+Shift+s exec i3lock --color 191919 --show-failed-attempts
+
+#--- mpc keybinds ---#
 
 # With media keys
 bindsym Shift+XF86AudioRaiseVolume exec mpc volume +5
@@ -260,7 +275,6 @@ client.unfocused	#222222	#222222	#888888	#292d2e
 client.urgent		#2f343a	#900000	#ffffff	#900000
 client.placeholder	#000000	#0c0c0c	#ffffff	#000000
 
-
 #--- Program/Window specific ---#
 
 for_window [class="Steam"] floating enable
@@ -269,3 +283,6 @@ assign [class=^Steam$] 2
 for_window [class="^VirtualBox$"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
+for_window [class="Skype"] floating enable
+for_window [class="TeamSpeak 3"] floating enable
+for_window [class="Pavucontrol"] floating enable
