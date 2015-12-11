@@ -21,10 +21,11 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} untracked"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%} clean"
 
 ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[cyan]%} add"
-ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[yellow]%} ⚒ "
+#ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[yellow]%} ⚒ "
+ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[yellow]%} mod"
 ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%} del"
 ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[blue]%} ren"
-ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[magenta]%} unmerged"
+ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[magenta]%} unmrgd"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[blue]%}"
 
 # More symbols to choose from:

@@ -208,12 +208,12 @@ exec nohup copy-console &
 #exec xautolock -time 1 -locker 'i3lock --show-failed-attempts --color 191919' &
 
 
-exec --no-startup-id i3-msg 'workspace "Music"; exec xfce4-terminal'
+exec i3-msg 'workspace "Music"; exec xfce4-terminal'
+exec i3-msg 'workspace "Music"; exec xfce4-terminal'
 exec i3-msg 'workspace "Music"; exec xfce4-terminal'
 exec i3-msg 'workspace 22; exec pavucontrol'
 exec i3-msg 'workspace 2; exec steam'
 exec i3-msg 'workspace 1; exec google-chrome'
-exec i3-msg 'workspace 20; exec xfce4-terminal'
 exec i3-msg 'workspace 20; exec xfce4-terminal'
 
 #--- Keybinds ---#
@@ -268,7 +268,7 @@ hide_edge_borders vertical
 
 #--- Colors ---#
 
-# class			border  backgr. text	indicator
+# class	        	border  backgr. text	indicator
 client.focused		#3366CC	#3366CC	#ffffff	#2e9ef4
 client.focused_inactive #191919	#191919	#ffffff	#484e50
 client.unfocused	#222222	#222222	#888888	#292d2e
@@ -286,3 +286,5 @@ for_window [window_role="task_dialog"] floating enable
 for_window [class="Skype"] floating enable
 for_window [class="TeamSpeak 3"] floating enable
 for_window [class="Pavucontrol"] floating enable
+for_window [class="Virt-manager"] floating enable
+for_window [class="mumble"] floating enable

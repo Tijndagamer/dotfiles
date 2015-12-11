@@ -92,15 +92,16 @@ alias egrep='egrep --color=auto'
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
+alias lal='ls -Al'
 alias top='htop'
 alias pgrep='grep -P'
 
 # -A: smart home
 # -E: tabs to spaces
 # -i: autoindent
-# -m: mouse support
+#( -m: mouse support)
 # -T4: tabs are 4 spaces
-alias nano='nano -AEimT4'
+alias nano='nano -AEiT4'
 
 export PATH=~/bin:"$PATH"
 man() {
