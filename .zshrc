@@ -96,12 +96,13 @@ alias lal='ls -Al'
 alias top='htop'
 alias pgrep='grep -P'
 
+# -c: show line number, collum etc
 # -A: smart home
 # -E: tabs to spaces
 # -i: autoindent
 #( -m: mouse support)
 # -T4: tabs are 4 spaces
-alias nano='nano -AEiT4'
+#alias nano='nano -cAEiT4'
 
 export PATH=~/bin:"$PATH"
 man() {
