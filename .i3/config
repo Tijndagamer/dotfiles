@@ -146,6 +146,7 @@ workspace "Music" output HDMI-0
 workspace 20 output HDMI-0
 workspace 21 output HDMI-0
 workspace 22 output HDMI-0
+workspace 11 output DVI-D-0
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -183,6 +184,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	position top
+    tray_output DVI-I-1
 	status_command i3blocks -c ~/.i3/blocksconfig
 }
 
@@ -214,7 +216,7 @@ exec i3-msg 'workspace "Music"; exec xfce4-terminal'
 exec i3-msg 'workspace 22; exec pavucontrol'
 exec i3-msg 'workspace 2; exec steam'
 exec i3-msg 'workspace 1; exec google-chrome'
-exec i3-msg 'workspace 20; exec xfce4-terminal'
+exec i3-msg 'workspace 22; exec xfce4-terminal'
 
 #--- Keybinds ---#
 

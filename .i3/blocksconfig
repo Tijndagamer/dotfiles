@@ -30,6 +30,11 @@ interval=30
 #command=getbatterystatus
 #interval=1
 
+#[mpd]
+#command=music_i3blocks
+#interval=1
+#color=#19D1FF
+
 [time]
 command=date '+%H:%M %d-%m-%Y'
 color=#19D1FF
