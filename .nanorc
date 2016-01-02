@@ -8,3 +8,4 @@ set tabstospaces
 set autoindent
 
 set smarthome
+set softwrap

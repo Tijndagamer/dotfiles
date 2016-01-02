@@ -102,6 +102,7 @@ alias pgrep='grep -P'
 # -i: autoindent
 #( -m: mouse support)
 # -T4: tabs are 4 spaces
+# I moved this to the nano config file, ~/.nanorc
 #alias nano='nano -cAEiT4'
 
 export PATH=~/bin:"$PATH"
