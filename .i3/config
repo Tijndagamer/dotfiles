@@ -216,20 +216,20 @@ exec i3-msg 'workspace "Music"; exec xfce4-terminal'
 exec i3-msg 'workspace 22; exec pavucontrol'
 exec i3-msg 'workspace 2; exec steam'
 exec i3-msg 'workspace 1; exec google-chrome'
-exec i3-msg 'workspace 22; exec xfce4-terminal'
 exec i3-msg 'workspace 11; exec teamspeak'
 
 #--- Keybinds ---#
 
+# Taking screenshots
+
 # Make a high quality screenshot when the print screen button is pressed.
-bindsym Print exec scrot --quality 100 -e 'mv $f ~/Pictures/Screenshots/$f'
+bindsym Print exec scrot --quality 100 --multidisp --exec 'mv $f ~/Pictures/Screenshots/$f' && notify-send "Screenshot taken" "(All monitors)" -t 1000
 
 # Make a high quality screenshot of only the focused window.
-bindsym Shift+Print exec scrot --focused --quality 100 -e 'mv $f ~/Pictures/Screenshots/$f'
-#bindsym Shift+Print exec scrot -e 'mv $f ~/Pictures/Screenshots/$f'
+bindsym Shift+Print exec scrot --focused --quality 100 --exec 'mv $f ~/Pictures/Screenshots/$f' && notify-send "Screenshot taken" "(Focused window)" -t 1000
 
 # For some reason, moving the screenshot doesn't work.
-bindsym $mod+Shift+Print exec scrot -s -e 'mv $f ~/Pictures/Screenshot/$f'
+bindsym $mod+Shift+Print exec scrot --select --exec 'mv $f ~/Pictures/Screenshot/$f' && notify-send "Screenshot taken" "(Selected area)" -t 1000
 
 # I should probably set this to a calculator program, but for now this'll do.
 bindsym XF86Calculator exec setrandomwallpaper
