@@ -17,7 +17,7 @@ ZSH_THEME="custom"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -93,8 +93,9 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 alias lal='ls -Al'
-alias top='htop'
+alias top='htop' # htop is so much better than top
 alias pgrep='grep -P'
+alias please='sudo'
 
 # -c: show line number, collum etc
 # -A: smart home
