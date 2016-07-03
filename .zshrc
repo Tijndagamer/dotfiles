@@ -97,16 +97,8 @@ alias top='htop' # htop is so much better than top
 alias pgrep='grep -P'
 alias please='sudo'
 
-# -c: show line number, collum etc
-# -A: smart home
-# -E: tabs to spaces
-# -i: autoindent
-#( -m: mouse support)
-# -T4: tabs are 4 spaces
-# I moved this to the nano config file, ~/.nanorc
-#alias nano='nano -cAEiT4'
-
 export PATH=~/bin:"$PATH"
+export PATH=~/Programs/pebble-dev/pebble-sdk-4.2-linux64/bin:$PATH
 man() {
     env LESS_TERMCAP_mb=$'\E[01;31m' \
     LESS_TERMCAP_md=$'\E[01;38;5;74m' \
@@ -119,3 +111,4 @@ man() {
 }
 
 export TERM=xterm-256color
+export EDITOR=nano

@@ -36,7 +36,8 @@ interval=30
 #color=#19D1FF
 
 [time]
-command=date '+%H:%M %d-%m-%Y'
+#command=date '+%H:%M %d-%m-%Y'
+command=date '+%Y-%m-%d %H:%M'
 color=#19D1FF
 #command=timecolor
 interval=1

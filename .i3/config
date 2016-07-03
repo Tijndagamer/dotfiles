@@ -147,6 +147,7 @@ workspace 20 output HDMI-0
 workspace 21 output HDMI-0
 workspace 22 output HDMI-0
 workspace 11 output DVI-D-0
+workspace "IRC" output DVI-D-0
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -205,18 +206,18 @@ exec monitor_fix
 # Mouse dissapears after a while
 exec unclutter
 # Copy 'daemon'
-exec nohup copy-console &
+#exec nohup copy-console &
 # Set screenlocker after x amount of time
 #exec xautolock -time 1 -locker 'i3lock --show-failed-attempts --color 191919' &
-
 
 exec i3-msg 'workspace "Music"; exec xfce4-terminal'
 exec i3-msg 'workspace "Music"; exec xfce4-terminal'
 exec i3-msg 'workspace "Music"; exec xfce4-terminal'
 exec i3-msg 'workspace 22; exec pavucontrol'
 exec i3-msg 'workspace 2; exec steam'
-exec i3-msg 'workspace 1; exec google-chrome'
+exec i3-msg 'workspace 1; exec chromium-browser'
 exec i3-msg 'workspace 11; exec teamspeak'
+exec i3-msg 'workspace 22; exec stack'
 
 #--- Keybinds ---#
 
@@ -291,3 +292,6 @@ for_window [class="TeamSpeak 3"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Virt-manager"] floating enable
 for_window [class="mumble"] floating enable
+for_window [class="Mumble"] floating enable
+for_window [class="File Operation Progress"] floating enable
+for_window [class="qemu-pebble"] floating enable
