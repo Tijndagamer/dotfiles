@@ -1,21 +1,21 @@
 [cpu_usage]
-command=getcpuusage
+command=getcpuusage --i3blocks
 interval=1
 
 [cpu_temp]
-command=getcputemp
+command=getcputemp --i3blocks
 interval=1
 
 [gpu_temp]
-command=getgputemp
+command=getgputemp --i3blocks
 interval=1
 
 [mem_usage]
-command=getusedmem
+command=getusedmem --i3blocks
 interval=1
 
 [disk]
-command= getfreespace
+command= getfreespace --i3blocks
 interval=30
 
 #[networkstatus_wan]
