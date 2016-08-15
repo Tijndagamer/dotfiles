@@ -35,9 +35,12 @@ interval=30
 #interval=1
 #color=#19D1FF
 
+[weather]
+command=weather --i3blocks
+interval=60
+
 [time]
-#command=date '+%H:%M %d-%m-%Y'
 command=date '+%Y-%m-%d %H:%M'
-color=#19D1FF
-#command=timecolor
+#color=#19D1FF
+color=#00CC00
 interval=1

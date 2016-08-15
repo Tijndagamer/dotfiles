@@ -109,6 +109,28 @@ bindsym $mod+F9 workspace 19
 bindsym $mod+F10 workspace 20
 bindsym $mod+F11 workspace 21
 bindsym $mod+F12 workspace 22
+bindsym $mod+$win+1 workspace 23
+bindsym $mod+$win+2 workspace 24
+bindsym $mod+$win+3 workspace 25
+bindsym $mod+$win+4 workspace 26
+bindsym $mod+$win+5 workspace 27
+bindsym $mod+$win+6 workspace 28
+bindsym $mod+$win+7 workspace 29
+bindsym $mod+$win+8 workspace 30
+bindsym $mod+$win+9 workspace 31
+bindsym $mod+$win+0 workspace 32
+bindsym $mod+$win+F1 workspace 33
+bindsym $mod+$win+F2 workspace 34
+bindsym $mod+$win+F3 workspace 35
+bindsym $mod+$win+F4 workspace 36
+bindsym $mod+$win+F5 workspace 37
+bindsym $mod+$win+F6 workspace 38
+bindsym $mod+$win+F7 workspace 39
+bindsym $mod+$win+F8 workspace 40
+bindsym $mod+$win+F9 workspace 41
+bindsym $mod+$win+F10 workspace 42
+bindsym $mod+$win+F11 workspace 43
+bindsym $mod+$win+F12 workspace 44
 bindsym $mod+i workspace IRC
 bindsym $mod+m workspace Music
 
@@ -135,6 +157,28 @@ bindsym $mod+Shift+F9 move container to workspace 19
 bindsym $mod+Shift+F10 move container to workspace 20
 bindsym $mod+Shift+F11 move container to workspace 21
 bindsym $mod+Shift+F12 move container to workspace 22
+bindsym $mod+$win+Shift+1 move container to workspace 23
+bindsym $mod+$win+Shift+2 move container to workspace 24
+bindsym $mod+$win+Shift+3 move container to workspace 25
+bindsym $mod+$win+Shift+4 move container to workspace 26
+bindsym $mod+$win+Shift+5 move container to workspace 27
+bindsym $mod+$win+Shift+6 move container to workspace 28
+bindsym $mod+$win+Shift+7 move container to workspace 29
+bindsym $mod+$win+Shift+8 move container to workspace 30
+bindsym $mod+$win+Shift+9 move container to workspace 31
+bindsym $mod+$win+Shift+0 move container to workspace 32
+bindsym $mod+$win+Shift+F1 move container to workspace 33
+bindsym $mod+$win+Shift+F2 move container to workspace 34
+bindsym $mod+$win+Shift+F3 move container to workspace 35
+bindsym $mod+$win+Shift+F4 move container to workspace 36
+bindsym $mod+$win+Shift+F5 move container to workspace 37
+bindsym $mod+$win+Shift+F6 move container to workspace 38
+bindsym $mod+$win+Shift+F7 move container to workspace 39
+bindsym $mod+$win+Shift+F8 move container to workspace 40
+bindsym $mod+$win+Shift+F9 move container to workspace 41
+bindsym $mod+$win+Shift+F10 move container to workspace 42
+bindsym $mod+$win+Shift+F11 move container to workspace 43
+bindsym $mod+$win+Shift+F12 move container to workspace 44
 bindsym $mod+Shift+i move container to workspace IRC
 bindsym $mod+Shift+m move container to workspace Music
 
@@ -246,16 +290,17 @@ bindsym $mod+$win+p exec setxkbmap 'us(euro)'
 # Sceenlock
 bindysym $win+Shift+s exec i3lock --color 191919 --show-failed-attempts
 
-#--- mpc keybinds ---#
+#--- Audio with fn-layer media keys --#
 
-# With media keys
-bindsym Shift+XF86AudioRaiseVolume exec mpc volume +5
-bindsym Shift+XF86AudioLowerVolume exec mpc volume -5
-bindsym Shift+XF86AudioNext exec mpc next
-bindsym Shift+XF86AudioPrev exec mpc prev
-bindsym Shift+XF86AudioPlay exec mpc toggle
-bindsym Shift+XF86AudioStop exec mpc stop
-bindsym Shift+XF86AudioMute exec mpc volume 0
+#bindsym XF86AudioRaiseVolume exec amixer set Master 5+
+#bindsym XF86AudioLowerVolume exec amixer set Master 5-
+#bindsym XF86AudioNext exec mpc next
+#bindsym XF86AudioPrev exec mpc prev
+#bindsym XF86AudioPlay exec mpc toggle
+#bindsym XF86AudioStop exec mpc stop
+bindsym XF86AudioMute exec amixer set Master 0
+
+#--- mpc ---#
 
 # With windows key
 bindsym $win+e exec mpc volume +5
