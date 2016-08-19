@@ -10,6 +10,8 @@ set autoindent
 set smarthome
 set softwrap
 
+set speller "aspell -x -c"
+
 syntax "lua" ".*\.lua$"
 
 ## General

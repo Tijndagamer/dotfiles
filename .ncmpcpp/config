@@ -384,11 +384,11 @@ header_text_scrolling = "yes"
 ## Note: You can define startup screen for ncmpcpp
 ## by choosing screen number from the list above.
 ##
-startup_screen = "2"
+#####startup_screen = "2"
 #
 jump_to_now_playing_song_at_start = "yes"
 #
-ask_before_clearing_main_playlist = "yes"
+######ask_before_clearing_main_playlist = "yes"
 #
 clock_display_seconds = "yes"
 #
@@ -454,43 +454,46 @@ enable_window_title = "no"
 #use_console_editor = "no" (set to yes, if your editor is console app)
 #
 ##### colors definitions #####
-#
 colors_enabled = "yes"
-#
+
 empty_tag_color = "cyan"
-#
+
 header_window_color = "yellow"
-#
+
 #volume_color = "default"
 volume_color = "yellow"
-#
+
 #state_line_color = "default"
 state_line_color = "yellow"
-#
+
 #state_flags_color = "default"
 state_flags_color = "yellow"
-#
+
 main_window_color = "yellow"
-#
+
 #color1 = "white"
 color1 = "yellow"
-#
+
 #color2 = "green"
 color2 = "red"
-#
+
 main_window_highlight_color = "default"
-#
+
 progressbar_color = "yellow"
-#
+
 statusbar_color = "yellow"
-#
+
 alternative_ui_separator_color = "black"
-#
+
 active_column_color = "red"
-#
+
 visualizer_color = "cyan"
-#
+
 window_border_color = "green"
-#
+
 active_window_border = "red"
-#
+
+
+
+
+browser_sort_mode = "mtime"
