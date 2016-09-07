@@ -135,3 +135,8 @@ man() {
     LESS_TERMCAP_us=$'\E[04;38;5;146m' \
     man "$@"
 }
+
+export TERM=xterm-256color
+#export EDITOR=nano
+export EDITOR=vim
+export PATH=~/Programs/pebble-dev/pebble-sdk-4.4-linux64/bin:$PATH
