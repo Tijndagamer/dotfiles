@@ -111,4 +111,4 @@ man() {
 }
 
 export TERM=xterm-256color
-export EDITOR=nano
+export EDITOR=vim
