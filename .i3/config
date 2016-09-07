@@ -249,12 +249,11 @@ exec monitor_fix
 #exec --no-startup-id compton
 # Mouse dissapears after a while
 exec unclutter
-# Copy 'daemon'
-#exec nohup copy-console &
 # Set screenlocker after x amount of time
+##### Doesn't work for some reason
 #exec xautolock -time 1 -locker 'i3lock --show-failed-attempts --color 191919' &
 
-exec i3-msg 'workspace "Music"; exec xfce4-terminal'
+exec i3-msg 'workspace "Music"; exec xfce4-terminal -x mpd_fix'
 exec i3-msg 'workspace "Music"; exec xfce4-terminal'
 exec i3-msg 'workspace "Music"; exec xfce4-terminal'
 exec i3-msg 'workspace 22; exec pavucontrol'

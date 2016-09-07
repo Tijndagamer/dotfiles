@@ -1,3 +1,7 @@
+[stack_backup_check]
+command=check_stack_backup
+interval=60
+
 [cpu_usage]
 command=getcpuusage --i3blocks
 interval=1
