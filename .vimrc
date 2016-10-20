@@ -3,7 +3,8 @@ filetype off
 filetype plugin indent on
  
 syntax on
- 
+set ruler
+
 " do this before you paste stuff, unless it's like a one-liner
 set pastetoggle=<F2>
  
@@ -21,16 +22,19 @@ set expandtab
 set smartindent
  
 " line length
-match Error '\%>79v.\+'
-set tw=79
-set wm=2
+"match Error '\%>79v.\+'
+"set tw=79
+"set wm=2
 " set colorcolumn=79
-set formatprg=par\ -w79
+"set formatprg=par\ -w79
 
 "" when you get vim8 uncomment the liner under
 " set breakindent
 "" uncomment above when vim8
- 
+" Disable autowrapping
+set nowrap
+
+
 " colorscheme
 colorscheme desert
  
