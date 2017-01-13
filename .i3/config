@@ -183,14 +183,24 @@ bindsym $mod+Shift+i move container to workspace IRC
 bindsym $mod+Shift+m move container to workspace Music
 
 # set workspaces to specific screen
+# Middle monitor
 workspace 1 output DVI-I-1
 workspace 2 output DVI-I-1
 workspace 3 output DVI-I-1
+workspace 4 output DVI-I-1
+workspace 5 output DVI-I-1
+
+# Right monitor
 workspace "Music" output HDMI-0
+workspace 19 output HDMI-0
 workspace 20 output HDMI-0
 workspace 21 output HDMI-0
 workspace 22 output HDMI-0
+
+# Left monitor
 workspace 11 output DVI-D-0
+workspace 12 output DVI-D-0
+workspace 13 output DVI-D-0
 workspace "IRC" output DVI-D-0
 
 # reload the configuration file
@@ -253,14 +263,18 @@ exec unclutter
 ##### Doesn't work for some reason
 #exec xautolock -time 1 -locker 'i3lock --show-failed-attempts --color 191919' &
 
+# Enable numlock
+exec xdotool key 0xff7f
+
 exec i3-msg 'workspace "Music"; exec xfce4-terminal -x mpd_fix'
 exec i3-msg 'workspace "Music"; exec xfce4-terminal'
 exec i3-msg 'workspace "Music"; exec xfce4-terminal'
-exec i3-msg 'workspace 22; exec pavucontrol'
-exec i3-msg 'workspace 2; exec steam'
-exec i3-msg 'workspace 1; exec chromium-browser'
 exec i3-msg 'workspace 11; exec teamspeak'
 exec i3-msg 'workspace 22; exec stack'
+exec i3-msg 'workspace 22; exec pavucontrol'
+exec i3-msg 'workspace 1; exec chromium-browser'
+exec i3-msg 'workspace 2; exec steam'
+exec i3-msg 'workspace 3; exec claws-mail'
 
 #--- Keybinds ---#
 
@@ -283,8 +297,8 @@ bindsym XF86AudioRaiseVolume exec amixer set Master 5+
 bindsym XF86AudioLowerVolume exec amixer set Master 5-
 
 # Change keyboard layout
-bindsym $mod+$win+o exec setxkbmap 'us(intl)'
-bindsym $mod+$win+p exec setxkbmap 'us(euro)'
+bindsym $mod+$win+o exec setxkbmap 'us(intl)' && notify-send -t 500 "us(intl)"
+bindsym $mod+$win+p exec setxkbmap 'us(euro)' && notify-send -t 500 "us(euro)"
 
 # Sceenlock
 bindysym $win+Shift+s exec i3lock --color 191919 --show-failed-attempts
