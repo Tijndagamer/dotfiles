@@ -297,8 +297,8 @@ bindsym XF86AudioRaiseVolume exec amixer set Master 5+
 bindsym XF86AudioLowerVolume exec amixer set Master 5-
 
 # Change keyboard layout
-bindsym $mod+$win+o exec setxkbmap 'us(intl)' && notify-send -t 500 "us(intl)"
-bindsym $mod+$win+p exec setxkbmap 'us(euro)' && notify-send -t 500 "us(euro)"
+bindsym $mod+$win+o exec setxkbmap 'us(intl)'
+bindsym $mod+$win+p exec setxkbmap 'us(euro)'
 
 # Sceenlock
 bindysym $win+Shift+s exec i3lock --color 191919 --show-failed-attempts
