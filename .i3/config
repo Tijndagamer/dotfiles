@@ -189,6 +189,7 @@ workspace 2 output DVI-I-1
 workspace 3 output DVI-I-1
 workspace 4 output DVI-I-1
 workspace 5 output DVI-I-1
+workspace 6 output DVI-I-1
 
 # Right monitor
 workspace "Music" output HDMI-0
@@ -249,7 +250,7 @@ bar {
 exec setdefaultwallpaper
 # Disable screen turning off
 exec xset -dpms
-# Lower the mouse sensitivity
+# Lower the mouse sensitivity (for Logitech G300)
 exec set_mouse_sen_low
 # Redshift, otherwise my eyes die
 exec nohup redshift &
@@ -266,15 +267,18 @@ exec unclutter
 # Enable numlock
 exec xdotool key 0xff7f
 
+exec mpd
+
 exec i3-msg 'workspace "Music"; exec xfce4-terminal -x mpd_fix'
 exec i3-msg 'workspace "Music"; exec xfce4-terminal'
 exec i3-msg 'workspace "Music"; exec xfce4-terminal'
-exec i3-msg 'workspace 11; exec teamspeak'
+#exec i3-msg 'workspace 11; exec teamspeak'
 exec i3-msg 'workspace 22; exec stack'
 exec i3-msg 'workspace 22; exec pavucontrol'
-exec i3-msg 'workspace 1; exec chromium-browser'
+exec i3-msg 'workspace 1; exec firefox'
 exec i3-msg 'workspace 2; exec steam'
 exec i3-msg 'workspace 3; exec claws-mail'
+exec i3-msg 'workspace 4; exec telegram'
 
 #--- Keybinds ---#
 
@@ -339,9 +343,11 @@ client.placeholder	#000000	#0c0c0c	#ffffff	#000000
 
 #--- Program/Window specific ---#
 
-for_window [class="Steam"] floating enable
 assign [class=^Steam$] 2
+assign [class="claws-mail"] 3
+assign [class="telegram"] 4
 
+for_window [class="Steam"] floating enable
 for_window [class="^VirtualBox$"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
@@ -353,3 +359,4 @@ for_window [class="mumble"] floating enable
 for_window [class="Mumble"] floating enable
 for_window [class="File Operation Progress"] floating enable
 for_window [class="qemu-pebble"] floating enable
+for_window [class="Float"] floating enable

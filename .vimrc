@@ -8,7 +8,7 @@ set nocompatible
 syntax on
 set ruler
 colorscheme desert
-set showmatch       " Highlight matching [{()}]
+"set showmatch       " Highlight matching [{()}]
 
 " Keybindings
 set pastetoggle=<F2>
@@ -43,5 +43,21 @@ set backspace=indent,eol,start
 
 set nobackup
 set noswapfile
-
 set updatetime=1000
+
+" Spelling control
+set dictionary+="/usr/share/dict/words"
+set dictionary+="/usr/share/dict/dutch"
+"set spelllang=en,nl
+au bufnewfile,bufreadpost *.md set filetype=markdown
+au bufnewfile,bufreadpost *.txt set filetype=txt
+au bufnewfile,bufreadpost *.tex set filetype=tex
+au FileType markdown set spell
+au FileType markdown set spelllang=en,nl
+au FileType tex set spell
+au FileType tex set spelllang=en,nl
+"au FileType txt,markdown set spell
+    " zg: add word to dict
+    " z=: show suggestions
+    " ]s | [s: next/previous spelling error
+"au FileType txt,markdown set spelllang=en,nl

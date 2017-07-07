@@ -26,7 +26,7 @@ lyrics_directory = "~/.lyrics"
 ## set it in order to make tag editor and renaming files work properly
 #
 mpd_host = "localhost"
-#mpd_host = "192.168.0.64"
+#mpd_host = "192.168.1.64"
 #
 mpd_port = "6600"
 #
@@ -58,9 +58,9 @@ mpd_music_dir = "/home/martijn/Media/Music"
 ## If you set format to 44100:16:2, make it 'yes'.
 ##
 #
-visualizer_in_stereo = "yes"
+#visualizer_in_stereo = "yes"
 #
-visualizer_fifo_path = "/tmp/mpd.fifo"
+#visualizer_fifo_path = "/tmp/mpd.fifo"
 #
 ##
 ## Note: Below parameter is needed for ncmpcpp
@@ -70,7 +70,7 @@ visualizer_fifo_path = "/tmp/mpd.fifo"
 ## are some problems with it.
 ##
 #
-visualizer_output_name = "mpd_fifo_out"
+#visualizer_output_name = "mpd_fifo_out"
 #
 ##
 ## Note: Below parameter defines how often ncmpcpp
