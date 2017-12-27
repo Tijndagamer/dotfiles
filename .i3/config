@@ -249,7 +249,7 @@ bar {
 # Set the walpaper
 exec setdefaultwallpaper
 # Disable screen turning off
-exec xset -dpms
+#exec xset -dpms
 # Lower the mouse sensitivity (for Logitech G300)
 exec set_mouse_sen_low
 # Redshift, otherwise my eyes die
@@ -268,6 +268,7 @@ exec unclutter
 exec xdotool key 0xff7f
 
 exec mpd
+exec workrave
 
 exec i3-msg 'workspace "Music"; exec xfce4-terminal -x mpd_fix'
 exec i3-msg 'workspace "Music"; exec xfce4-terminal'
@@ -285,13 +286,13 @@ exec i3-msg 'workspace 4; exec telegram'
 # Taking screenshots
 
 # Make a high quality screenshot when the print screen button is pressed.
-bindsym Print exec scrot --quality 100 --multidisp --exec 'mv $f ~/Pictures/Screenshots/$f' && notify-send "Screenshot taken" "(All monitors)" -t 1000
+bindsym Print exec scrot --quality 100 --multidisp --exec 'mv $f ~/Documenten/Pictures/Screenshots/$f' && notify-send "Screenshot taken" "(All monitors)" -t 1000
 
 # Make a high quality screenshot of only the focused window.
-bindsym Shift+Print exec scrot --focused --quality 100 --exec 'mv $f ~/Pictures/Screenshots/$f' && notify-send "Screenshot taken" "(Focused window)" -t 1000
+bindsym Shift+Print exec scrot --focused --quality 100 --exec 'mv $f ~/Documenten/Pictures/Screenshots/$f' && notify-send "Screenshot taken" "(Focused window)" -t 1000
 
 # For some reason, moving the screenshot doesn't work.
-bindsym $mod+Shift+Print exec scrot --select --exec 'mv $f ~/Pictures/Screenshot/$f' && notify-send "Screenshot taken" "(Selected area)" -t 1000
+bindsym $mod+Shift+Print exec scrot --select --exec 'mv $f ~/Documenten/Pictures/Screenshot/$f' && notify-send "Screenshot taken" "(Selected area)" -t 1000
 
 # I should probably set this to a calculator program, but for now this'll do.
 bindsym XF86Calculator exec setrandomwallpaper
@@ -346,6 +347,8 @@ client.placeholder	#000000	#0c0c0c	#ffffff	#000000
 assign [class=^Steam$] 2
 assign [class="claws-mail"] 3
 assign [class="telegram"] 4
+assign [class="TelegramDesktop"] 4
+assign [class="dogecoin-qt"] 10
 
 for_window [class="Steam"] floating enable
 for_window [class="^VirtualBox$"] floating enable
