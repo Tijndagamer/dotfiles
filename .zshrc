@@ -98,7 +98,7 @@ alias pgrep='grep -P'
 alias please='sudo'
 
 export PATH=~/bin:"$PATH"
-export PATH=~/Programs/pebble-dev/pebble-sdk-4.2-linux64/bin:$PATH
+
 man() {
     env LESS_TERMCAP_mb=$'\E[01;31m' \
     LESS_TERMCAP_md=$'\E[01;38;5;74m' \
@@ -111,4 +111,5 @@ man() {
 }
 
 export TERM=xterm-256color
+#export TERM=screen-256color
 export EDITOR=vim
