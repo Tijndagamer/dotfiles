@@ -113,3 +113,7 @@ man() {
 export TERM=xterm-256color
 #export TERM=screen-256color
 export EDITOR=vim
+
+export HISTSIZE=50000
+export SAVEHIST=512000
+export GOPATH=$HOME/Coding/go
