@@ -51,7 +51,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo pip)
+plugins=(git sudo pip command-not-found)
 
 # User configuration
 
@@ -96,6 +96,7 @@ alias lal='ls -Al'
 alias top='htop' # htop is so much better than top
 alias pgrep='grep -P'
 alias please='sudo'
+alias ncdu='ncdu -r'
 
 export PATH=~/bin:"$PATH"
 
@@ -114,6 +115,6 @@ export TERM=xterm-256color
 #export TERM=screen-256color
 export EDITOR=vim
 
-export HISTSIZE=50000
-export SAVEHIST=512000
+export HISTSIZE=5000000
+export SAVEHIST=5120000
 export GOPATH=$HOME/Coding/go
