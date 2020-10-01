@@ -20,15 +20,10 @@ command=getusedmem --i3blocks
 interval=1
 
 [disk]
-command= getfreespace --i3blocks
+command=getfreespace --i3blocks
 interval=30
-
-#[battery_level]
-#command=getbatterystatus
-#interval=1
 
 [time]
 command=date '+%Y-%m-%d (%a) %H:%M'
-#color=#19D1FF
 color=#00CC00
 interval=1

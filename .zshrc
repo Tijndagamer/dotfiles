@@ -43,6 +43,7 @@ DISABLE_AUTO_UPDATE="true"
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -51,7 +52,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo pip command-not-found)
+plugins=(git sudo pip)
 
 # User configuration
 
@@ -95,8 +96,7 @@ alias l='ls -CF'
 alias lal='ls -Al'
 alias top='htop' # htop is so much better than top
 alias pgrep='grep -P'
-alias please='sudo'
-alias ncdu='ncdu -r'
+alias ncdu='ncdu -r' # use read-only to prevent accidental deletion of files
 
 export PATH=~/bin:"$PATH"
 
@@ -115,6 +115,9 @@ export TERM=xterm-256color
 #export TERM=screen-256color
 export EDITOR=vim
 
-export HISTSIZE=5000000
-export SAVEHIST=5120000
-export GOPATH=$HOME/Coding/go
+export HISTSIZE=5000000000
+export SAVEHIST=5120000000
+
+export GOPATH=$HOME/Coding/lang-go
+
+export PATH="$HOME/.cargo/bin:$PATH"
