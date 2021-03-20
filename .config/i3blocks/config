@@ -19,8 +19,12 @@ interval=1
 command=getusedmem --i3blocks
 interval=1
 
+[diskhome]
+command=getfreespace /home --i3blocks
+interval=30
+
 [disk]
-command=getfreespace --i3blocks
+command=getfreespace / --i3blocks
 interval=30
 
 [time]
